@@ -85,6 +85,21 @@ links:
   - type: datastore
     labels:
     - valkey
+- name: otel
+  title: OpenTelemetry Collector
+  required: false
+  env:
+  - name: OTEL_EXPORTER_OTLP_ENDPOINT
+    value: 'http://{{link.host}}:{{link.port}}'
+  - name: OTEL_EXPORTER_OTLP_PROTOCOL
+    value: http/protobuf
+  - name: OTEL_EXPORTER_OTLP_HEADERS
+    value: 'Authorization=Bearer%20{{link.tokens.ingest_token}}'
+    secret: true
+  selectors:
+  - type: service
+    labels:
+    - otlp
 
 integrations:
 - name: variable
