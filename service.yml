@@ -160,6 +160,10 @@ workloads:
   containers:
   - name: dotnet
     image: wodby/dotnet
+    resources:
+      request:
+        cpu: 100
+        memory: 224
     build: true
     helm:
       resources: resources
