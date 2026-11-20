@@ -12,7 +12,9 @@ options:
   default: true
   eol: '2028-11-14T00:00:00+00:00'
   tag: 10.0-r3
+  digest: sha256:bb3f52b31bf8748907f8fc03f7e48dcfd68beb1d61261cba80442b934f856903
   devTag: 10.0-dev-r3
+  devDigest: sha256:be2e5d03d984e6f2f648eef385d4443d333f7c2c1bbaac8d90e59713cc0f0b79
 endpoints:
 - name: dotnet
   ports:
